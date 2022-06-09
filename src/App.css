@@ -1,38 +1,176 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+}
+
+#image-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+#image {
+  width: 250px;
+  height: 300px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#name {
+  font-size: 180px;
+  color: #2d2d2d;
+  letter-spacing: 20px;
+  line-height: 160px;
+  font-weight: 400;
+}
+
+#title {
+  margin-top: -120px;
+  color: #474646;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.icon-container {
+  height: 150px;
+  width: 150px;
+  background-color: #2d2d2d;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid #2d2d2d;
+}
+
+.icon-container:hover {
+  background-color: #ffffff;
+}
+
+.icon {
+  height: 48px;
+  width: 48px;
+  margin: 0 auto;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-container:hover .icon {
+  height: 48px;
+  width: 48px;
+  margin: 0 auto;
+  color: black;
+  border: 2px solid black;
+  padding: 35px;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media only screen and (max-width:688px) {
+  .App {
+    display: block;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  #name {
+    font-size: 100px;
+    color: #2d2d2d;
+    letter-spacing: 30px;
+    line-height: 100px;
+    font-weight: 400;
+  }
+
+  #title {
+    margin-top: -70px;
+    color: #474646;
+    font-size: 23px;
+    font-weight: 400;
+  }
+
+  .icon-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .icon-container:hover {
+    height: 120px;
+    width: 120px;
+    background-color: #ffffff;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid black;
+
+  }
+
+  .icon-container:hover .icon {
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-width:688px) and (max-width:922px) {
+  .App {
+    display: block;
+    padding: 0 10px;
+  }
+
+  #image {
+    width: 450px;
+    height: 550px;
+    padding-top: 20px;
+  }
+
+  #name {
+    font-size: 200px;
+    color: #2d2d2d;
+    letter-spacing: 40px;
+    line-height: 200px;
+    font-weight: 400;
+  }
+
+  #title {
+    margin-top: -120px;
+    color: #474646;
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-container {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .icon-container:hover {
+    height: 350px;
+    width: 350px;
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+
+  }
+
+  .icon-container:hover .icon {
+    width: 100px;
+    height: 100px;
+    padding: 50px;
   }
 }
